@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixarr.url = "github:rasmus-kirk/nixarr";
+    #nixarr.url = "github:rasmus-kirk/nixarr";
   };
 
   outputs = { 
@@ -17,7 +17,7 @@
 
         modules = [
           ./hosts/default/configuration.nix
-          nixarr.nixosModules.default
+          #nixarr.nixosModules.default
         ];
 
         specialArgs = { inherit inputs; };
