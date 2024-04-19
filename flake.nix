@@ -8,7 +8,7 @@
 
   outputs = { 
     nixpkgs,
-    nixarr,
+    #nixarr,
     ...
   }@inputs: {
     nixosConfigurations = {
