@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 let 
-  config_path = "~/server-config/modules/nixos/duckdns/config.json";
+  config_path = "/home/sacha/server-config/modules/nixos/duckdns/config.json";
 in {
   environment.systemPackages = with pkgs; [
     godns
