@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/nixos/duckdns.nix
+      ../../modules/nixos/nixarr.nix
     ];
 
   # Bootloader.
@@ -33,7 +34,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "fr";
     xkbVariant = "";
   };
