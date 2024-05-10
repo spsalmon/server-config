@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  enable = true;
+  nixarr = {
+    enable = true;
     # These two values are also the default, but you can set them to whatever
     # else you want
     # WARNING: Do _not_ set them to `/home/user/whatever`, it will not work!
@@ -33,4 +34,5 @@
     radarr.enable = true;
     readarr.enable = true;
     sonarr.enable = true;
+  };
 }
