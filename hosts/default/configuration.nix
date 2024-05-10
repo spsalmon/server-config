@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../../modules/nixos/duckdns.nix
       ../../modules/nixos/nixarr.nix
+      ../../modules/nixos/nvidia.nix
     ];
 
   # Bootloader.
