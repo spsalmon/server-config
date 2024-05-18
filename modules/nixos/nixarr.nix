@@ -23,7 +23,6 @@
         enable = true;
         domainName = "jellyfin.marenglen.org";
         acmeMail = "mail@marenglen.org"; # Required for ACME-bot
-        upnp.enable = true;
       };
     };
 
