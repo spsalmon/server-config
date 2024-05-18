@@ -9,6 +9,11 @@
     mediaDir = "/mnt/media";
     stateDir = "/mnt/media/.state/nixarr";
 
+     nixarr.ddns.njalla = {
+      enable = true;
+      keysFile = "/data/.secret/njalla/keys-file.json";
+    };
+
     jellyfin = {
       enable = true;
       # These options set up a nginx HTTPS reverse proxy, so you can access

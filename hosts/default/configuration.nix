@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/nixos/duckdns.nix
+      #../../modules/nixos/duckdns.nix
       ../../modules/nixos/nixarr.nix
       ../../modules/nixos/nvidia.nix
     ];
