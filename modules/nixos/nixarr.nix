@@ -16,12 +16,14 @@
 
     jellyfin = {
       enable = true;
+      openFirewall = true;
       # These options set up a nginx HTTPS reverse proxy, so you can access
       # Jellyfin on your domain with HTTPS
       expose.https = {
         enable = true;
         domainName = "jellyfin.marenglen.org";
-        acmeMail = "sacha@marenglen.org"; # Required for ACME-bot
+        acmeMail = "mail@marenglen.org"; # Required for ACME-bot
+        upnp.enable = true;
       };
     };
 
