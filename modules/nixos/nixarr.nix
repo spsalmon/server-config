@@ -9,7 +9,7 @@
     mediaDir = "/mnt/media";
     stateDir = "/mnt/media/.state/nixarr";
 
-     nixarr.ddns.njalla = {
+     ddns.njalla = {
       enable = true;
       keysFile = "/data/.secret/njalla/keys-file.json";
     };
