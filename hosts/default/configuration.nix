@@ -11,6 +11,7 @@
       #../../modules/nixos/duckdns.nix
       ../../modules/nixos/nixarr.nix
       ../../modules/nixos/nvidia.nix
+      ../../modules/nixos/turn_screen_off.nix
     ];
 
   # Bootloader.
