@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #../../modules/nixos/duckdns.nix
       ../../modules/nixos/nixarr.nix
       ../../modules/nixos/nvidia.nix
       ../../modules/nixos/turn_screen_off.nix
@@ -80,7 +79,7 @@
   services.openssh.settings.PasswordAuthentication = false;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 8096 8920 8989 7878 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = true;
