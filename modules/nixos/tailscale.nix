@@ -4,5 +4,5 @@
     enable = true;
   };
 
-  networking.firewall.allowedUDPPorts = [ ${services.tailscale.port} ];
+  networking.firewall.allowedUDPPorts = [ config.services.tailscale.port ];
 }
