@@ -16,7 +16,7 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.device = "/dev/disk/by-id/ata-WDC_WD5000BPKT-22PK4T0_WD-WXF1E32UJXJ1";
   boot.loader.grub.useOSProber = false;
 
   networking.hostName = "nixos"; # Define your hostname.
