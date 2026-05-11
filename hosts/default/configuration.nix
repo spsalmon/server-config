@@ -12,6 +12,7 @@
       ../../modules/nixos/nvidia.nix
       ../../modules/nixos/turn_screen_off.nix
       ../../modules/nixos/tailscale.nix
+      ../../modules/nixos/syncthing.nix
     ];
 
   # Bootloader.
