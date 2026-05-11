@@ -2,6 +2,8 @@
 {
   # 1. Enable the service and the firewall
   services.tailscale.enable = true;
+  services.tailscale.useRoutingFeatures = "server";
+  services.tailscale.extraUpFlags = [ "--advertise-exit-node" ];
   networking.nftables.enable = true;
   networking.firewall = {
     enable = true;
