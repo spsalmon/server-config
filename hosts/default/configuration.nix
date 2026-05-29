@@ -78,10 +78,10 @@
   # Enable the OpenSSH daemon.
 
   services.openssh.enable = true;
-  services.openssh.settings.PasswordAuthentication = false;
+  services.openssh.settings.PasswordAuthentication = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22 80 443 8096 8920 8989 7878 9091];
+  networking.firewall.allowedTCPPorts = [ 80 443 8096 8920 8989 7878 9091];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = true;
