@@ -6,6 +6,7 @@
     dataDir = "/home/sacha/Sync";
     configDir = "/home/sacha/.config/syncthing";
     openDefaultPorts = true;  # 22000/tcp, 22000/udp, 21027/udp
+    guiAddress = "0.0.0.0:8384";  # sets the --gui-address launch flag (overrides config.xml)
     settings.gui = {
       address = "0.0.0.0:8384";
       insecureAdminAccess = true;  # Tailscale is the security boundary
