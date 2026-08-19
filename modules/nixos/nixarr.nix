@@ -30,6 +30,20 @@
       enable = true;
       vpn.enable = false;
       #peerPort = 50000; # Set this to the port forwarded by your VPN
+
+      # Don't seed. The media disk filled to 100% once already, which
+      # crash-looped Jellyfin (it refuses to start with <2GiB free).
+      # Merged into services.transmission.settings by nixarr.
+      # NOTE: transmission only *stops* torrents at the ratio limit, it
+      # never deletes them. Actual removal comes from the *Arrs'
+      # "Remove Completed" setting, which lives in their own state dirs.
+      extraSettings = {
+        ratio-limit-enabled = true;
+        ratio-limit = 0.0;
+        # Backstop in case the ratio check doesn't fire; minutes.
+        idle-seeding-limit-enabled = true;
+        idle-seeding-limit = 60;
+      };
     };
 
     # It is possible for this module to run the *Arrs through a VPN, but it
