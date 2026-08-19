@@ -10,27 +10,27 @@
         "website-builder": "website-builder"
       },
       "locked": {
-        "lastModified": 1777494512,
-        "narHash": "sha256-Oc40uwOEZaCArzpVSuYpMUr+I+MhiRXM2SS0TCu9ars=",
-        "owner": "rasmus-kirk",
+        "lastModified": 1787143019,
+        "narHash": "sha256-knmrVctyB/uo3ao4Ya2GLPvxjlhxLjUZijSsty0uuSs=",
+        "owner": "spsalmon",
         "repo": "nixarr",
-        "rev": "086e873b87789911b814cd35f3483fff591786bb",
+        "rev": "40ffa213eea83a5a245659f425c679a2794326e5",
         "type": "github"
       },
       "original": {
-        "owner": "rasmus-kirk",
-        "ref": "dev",
+        "owner": "spsalmon",
+        "ref": "jellyfin-openapi-hashes",
         "repo": "nixarr",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1777954456,
-        "narHash": "sha256-hGdgeU2Nk87RAuZyYjyDjFL6LK7dAZN5RE9+hrDTkDU=",
+        "lastModified": 1787070829,
+        "narHash": "sha256-vXNVDVtvfiQuXthP0NHPFdNvvMTkGpx0UP8oddIWbNk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
+        "rev": "0ae2bc1419c3f345984c2629e72e7a631820fa4d",
         "type": "github"
       },
       "original": {
