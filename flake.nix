@@ -3,7 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixarr.url = "github:rasmus-kirk/nixarr/dev";
+    # Fork of nixarr/dev adding the jellyfin 10.11.9/10/11 openapi spec
+    # hashes. Upstream's table stops at 10.11.8 and has no fallback, so eval
+    # dies on any nixpkgs newer than that -- unstable and both current stable
+    # branches included. Drop this back to rasmus-kirk once the PR lands;
+    # nothing else in the fork differs.
+    nixarr.url = "github:spsalmon/nixarr/jellyfin-openapi-hashes";
     nixarr.inputs.nixpkgs.follows = "nixpkgs";
   };
 
