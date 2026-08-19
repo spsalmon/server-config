@@ -81,7 +81,14 @@
   services.openssh.settings.PasswordAuthentication = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 80 443 8096 8920 8989 7878 9091];
+  # LAN/WAN only. Tailscale traffic bypasses this entirely via
+  # trustedInterfaces = [ "tailscale0" ] in modules/nixos/tailscale.nix, so
+  # admin UIs are deliberately absent here and stay tailnet-only:
+  #   sonarr 8989, radarr 7878, transmission 9091, prowlarr 9696,
+  #   lidarr 8686, bazarr 6767, syncthing gui 8384
+  # 80/443 = nginx + ACME for jellyfin.marenglen.org, 8096/8920 = jellyfin
+  # itself (LAN clients); nixarr's jellyfin.openFirewall also opens those two.
+  networking.firewall.allowedTCPPorts = [ 80 443 8096 8920 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = true;

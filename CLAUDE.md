@@ -222,9 +222,6 @@ LAN/WAN-open ports, from `hosts/default/configuration.nix`:
 |------|------|
 | 80, 443 | nginx / ACME for the Jellyfin HTTPS exposure |
 | 8096, 8920 | Jellyfin HTTP / HTTPS |
-| 8989 | Sonarr |
-| 7878 | Radarr |
-| 9091 | Transmission RPC/web |
 
 Plus Syncthing's `openDefaultPorts` (22000/tcp, 22000/udp, 21027/udp) and Tailscale's UDP port.
 
@@ -232,8 +229,13 @@ Plus Syncthing's `openDefaultPorts` (22000/tcp, 22000/udp, 21027/udp) and Tailsc
 **only over Tailscale**. `PasswordAuthentication` is currently `true` — acceptable only because
 of that. If you ever re-open 22 to the LAN/WAN, turn password auth back off in the same change.
 
-Tailnet-only by design (not in the port list): Syncthing GUI (8384), Bazarr (6767),
-Lidarr (8686), Prowlarr (9696).
+Tailnet-only by design (not in the port list): every admin UI — Sonarr (8989),
+Radarr (7878), Transmission RPC/web (9091), Prowlarr (9696), Lidarr (8686),
+Bazarr (6767), Syncthing GUI (8384). Sonarr, Radarr and Transmission were open to
+the LAN until they were removed from `allowedTCPPorts`; tailnet access was
+unaffected because `trustedInterfaces` already covers it. The *Arrs reach each
+other and Transmission over loopback, so closing these breaks nothing internally —
+but a LAN device *not* on the tailnet can no longer reach them.
 
 ## nixarr (`modules/nixos/nixarr.nix`)
 
